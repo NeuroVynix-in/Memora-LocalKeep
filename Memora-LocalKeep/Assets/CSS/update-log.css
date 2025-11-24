@@ -1,0 +1,360 @@
+/* ---------------------------
+   Developer Page Responsive CSS
+   (Same Design + Mobile Friendly)
+--------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1f1c2c, #928dab, #5b4b8a);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR */
+.navbar {
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  backdrop-filter: blur(10px);
+  position: relative;
+  height: 4rem;
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffd700;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Updates Page Section */
+.updates-page {
+  flex: 1;
+  padding: 2rem 5%;
+}
+
+section {
+  margin-bottom: 2.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ffd700;
+}
+
+/* Footer inside each update block, bottom-left aligned */
+/* Update info block */
+.update-info {
+  position: relative;
+  margin-bottom: 2.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding-bottom: 2.8rem; /* room for footer */
+}
+
+.update-info a {
+  text-decoration: none;
+  color: #3a3a3a;
+}
+
+/* Footer at bottom-left inside block */
+.update-footer {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  font-size: 0.8rem;
+  color: #b9bbbe;
+  opacity: 0.85;
+  /* border-top: 0.1rem solid #b48efc; */
+  padding-top: 5px;
+  width: calc(100% - 30px);
+
+  /* main gradient line */
+  border-top: 2px solid;
+  border-image: linear-gradient(to right, #b48efc, #928dab, #5b4b8a);
+  border-image-slice: 1;
+}
+
+.update-footer strong {
+  color: #fff;
+}
+
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.final-update {
+  background: linear-gradient(135deg, #3a3a3a, #1f1c2c);
+  border: 2px solid rgba(255, 215, 0, 0.4);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.2);
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.final-update h2 {
+  color: #ffd700;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.final-update p {
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.github-link-box {
+  margin: 1.5rem 0;
+}
+
+.github-link-box #githubLink {
+  text-decoration: none;
+  color: #ffd700;
+}
+
+.github-btn {
+  background: #24292e;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.github-btn:hover {
+  background: #333;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+/* License Button */
+.license-btn {
+  background: #0d1117; /* Slightly darker than GitHub button */
+  color: #00ffcc; /* Neon cyan for a techy accent */
+  padding: 0.9rem 2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+  display: inline-block;
+  border: 2px solid #00ffcc;
+  margin-top: 0.8rem;
+}
+
+.license-btn:hover {
+  background: #00ffcc;
+  color: #0d1117;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0, 255, 204, 0.4);
+}
+
+.goodbye-line {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  color: #ffb6c1;
+}
+
+.final-update .update-footer strong {
+  color: #ffd700;
+}
+
+.final-update .update-footer {
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 1.5rem;
+  line-height: 1.6;
+}
+
+.notice {
+  background: rgba(120, 120, 120, 0.1);
+  border-left: 4px solid #6c757d; /* soft grayish tone */
+  color: #555; /* sad, muted text color */
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  font-style: italic;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.notice:hover {
+  background: rgba(100, 100, 100, 0.15);
+  border-left-color: #888;
+  color: #333;
+}
+
+
+/* ul {
+  list-style: none;
+} */
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+}
+
+/* 🌍 Responsive Design */
+@media (max-width: 1024px) {
+  .navbar h1 {
+    font-size: 1.3rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .updates-page {
+    padding: 2rem 3%;
+  }
+
+  section,
+  .update-info {
+    padding: 1.2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .navbar h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+  }
+
+  .updates-page {
+    padding: 1.5rem;
+  }
+
+  section,
+  .update-info {
+    padding-bottom: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .update-footer {
+    font-size: 0.75rem;
+    bottom: 10px;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar h1 {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    gap: 0.5rem;
+  }
+
+  .updates-page {
+    padding: 1rem;
+  }
+
+  section,
+  .update-info {
+    padding-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+
+  .update-footer {
+    font-size: 0.7rem;
+    bottom: 6px;
+  }
+
+  footer {
+    font-size: 0.75rem;
+  }
+}

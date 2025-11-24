@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About App | Memora - LocalKeep</title>
+  <link rel="shortcut icon" href="../../Assets/Favicon/Memora-LocalKeep-Favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1f1c2c, #928dab, #5b4b8a);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 1rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      flex: 1;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+      color: #ffd700;
+    }
+
+    section.card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    section.card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 30px rgba(0,0,0,0.5);
+    }
+
+    h2 {
+      color: #ffba08;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    p strong {
+      color: #ffd700;
+    }
+
+    ul.tech-stack {
+      list-style: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      color: #ffd700;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      section.card { padding: 1.5rem; }
+      h2 { font-size: 1.5rem; }
+      p { font-size: 0.95rem; }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.7rem; }
+      section.card { padding: 1rem; }
+      h2 { font-size: 1.3rem; }
+      p { font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+<main>
+  <h1>ℹ️ About App | Memora - LocalKeep</h1>
+
+  <section class="card" id="appInfoCard">
+    <h2>Loading app information...</h2>
+  </section>
+</main>
+
+<footer>
+  © 2025 Memora - LocalKeep — Made with ❤️ by NeuroVynix.in
+</footer>
+
+<script>
+  // Load appInfo.json
+  fetch('appInfo.json')
+    .then(response => response.json())
+    .then(data => {
+      const card = document.getElementById('appInfoCard');
+      let descriptionHTML = '';
+      
+      // If description is an array, format multiple paragraphs
+      if (Array.isArray(data.description)) {
+        descriptionHTML = data.description.map(line => `<p>${line}</p>`).join('');
+      } else {
+        descriptionHTML = `<p>${data.description}</p>`;
+      }
+
+      card.innerHTML = `
+        <h2>${data.appName} (${data.shortAppName})</h2>
+        <p><strong>Current Version:</strong> ${data.currentVersion}</p>
+        <p><strong>Author:</strong> ${data.author}</p>
+        <p><strong>Release Date:</strong> ${data.releaseDate}</p>
+        <p><strong>GoodBye Date:</strong> ${data.goodbyeDate}</p>
+
+        <p><strong>License:</strong> ${data.license}</p>
+        <h2>📖 Description</h2>
+        ${descriptionHTML}
+        <h2>🛠 Tech Stack</h2>
+        <p><strong>Frontend:</strong> ${data.techStack.frontend.join(', ')}</p>
+        <p><strong>Backend:</strong> ${data.techStack.backend}</p>
+        <p><strong>Libraries:</strong> ${data.techStack.libraries.join(', ')}</p>
+      `;
+    })
+    .catch(err => {
+      const card = document.getElementById('appInfoCard');
+      card.innerHTML = `<h2>Failed to load app info.</h2><p>${err}</p>`;
+    });
+</script>
+
+</body>
+</html>

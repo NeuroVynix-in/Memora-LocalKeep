@@ -1,0 +1,234 @@
+/* ---------------------------
+   Developer Page - Styled Version
+   Consistent with Memora UI
+--------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1f1c2c, #928dab, #5b4b8a);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR */
+.navbar {
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  backdrop-filter: blur(10px);
+  height: 4rem;
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffd700;
+}
+
+/* MAIN CONTENT */
+.developer-page {
+  flex: 1;
+  padding: 2rem 5%;
+}
+
+section {
+  margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+/* Developer Profile Section */
+.developer-profile {
+  text-align: center;
+}
+
+.dev-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #ffd700;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+
+.developer-profile h2 {
+  color: #ffd700;
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.dev-role {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 0.8rem;
+}
+
+.dev-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f5f5f5;
+}
+
+/* Contact Section */
+.developer-contact {
+  text-align: center;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+/* Coming Soon Note */
+.coming-soon-note {
+  margin-top: 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 4px solid #ffd700;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease;
+}
+
+.coming-soon-note p {
+  font-size: 0.95rem;
+  color: #f5f5f5;
+  line-height: 1.5;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Platform-Specific Buttons */
+.btn.github { background: #24292e; }
+.btn.twitter { background: #1da1f2; }
+.btn.youtube { background: #ff0000; }
+.btn.telegram { background: #0088cc; }
+.btn.discord-server { background: #5865f2; }
+.btn.reddit { background: #ff4500; }
+.btn.mail { background: #444444; }
+
+/* Hover Glow + Scale */
+.btn.github:hover {
+  background: #333;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+.btn.twitter:hover {
+  background: #0d8de1;
+  box-shadow: 0 0 12px rgba(29, 161, 242, 0.6);
+  transform: scale(1.05);
+}
+.btn.youtube:hover {
+  background: #cc0000;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+  transform: scale(1.05);
+}
+.btn.telegram:hover {
+  background: #007bb5;
+  box-shadow: 0 0 12px rgba(0, 136, 204, 0.6);
+  transform: scale(1.05);
+}
+.btn.discord-server:hover {
+  background: #4752c4;
+  box-shadow: 0 0 12px rgba(88, 101, 242, 0.6);
+  transform: scale(1.05);
+}
+.btn.reddit:hover {
+  background: #e03d00;
+  box-shadow: 0 0 12px rgba(255, 69, 0, 0.6);
+  transform: scale(1.05);
+}
+.btn.mail:hover {
+  background: #222;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+  }
+
+  .developer-page {
+    padding: 1rem 5%;
+  }
+
+  .dev-logo {
+    width: 100px;
+    height: 100px;
+  }
+}

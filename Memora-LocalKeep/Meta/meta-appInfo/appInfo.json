@@ -1,0 +1,20 @@
+{
+  "appName": "Memora - LocalKeep",
+  "shortAppName": "MemoraLK",
+  "currentVersion": "1.0.0-Stable",
+  "siteView": "appInfo.html",
+  "description": [
+    "Memora - LocalKeep is a lightweight local storage manager for notes, lists, and categories.",
+    "It allows users to manage their data offline with real-time updates, backup & restore,",
+    "PWA installability, and responsive design."
+  ],
+  "techStack": {
+    "frontend": ["HTML", "CSS", "JavaScript"],
+    "backend": "None (LocalStorage based)",
+    "libraries": ["Google Fonts (Poppins)"]
+  },
+  "author": "NeuroVynix.in",
+  "releaseDate": "2025-11-01",
+  "goodbyeDate": "2025-11-14",
+  "license": "MIT"
+}

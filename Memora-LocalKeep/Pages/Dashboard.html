@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Memora - LocalKeep</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="../Assets/CSS/category.css" />
+  <link rel="icon" href="../Assets/Favicon/Memora-LocalKeep-Favicon.png" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1><i class="fa-solid fa-gauge"></i> Dashboard</h1>
+      <ul class="nav-links">
+        <li><a href="../Home.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="Dashboard.html" class="active"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+        <li><a href="Export-JSON.html"><i class="fa-solid fa-file-export"></i> Export</a></li>
+        <li><a href="Import-JSON.html"><i class="fa-solid fa-file-import"></i> Import</a></li>
+        <li><a href="Update-Log.html"><i class="fa-solid fa-wrench"></i> Update Log</a></li>
+        <li><a href="Developer.html"><i class="fa-solid fa-code"></i> Developer</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="category-page">
+    <section class="create-category">
+      <h2>Create a New Category</h2>
+      <input type="text" id="categoryName" placeholder="Enter Category Name" />
+      <button id="createCategoryBtn"><i class="fa-solid fa-plus"></i> Create</button>
+    </section>
+
+    <section class="add-data">
+      <h2>Add Data to Category</h2>
+      <select id="categorySelect">
+        <option value="">Select Category</option>
+      </select>
+
+      <select id="dataTypeSelect">
+        <option value="">Select Data Type</option>
+        <option value="key">Key</option>
+        <option value="url">URL</option>
+        <option value="snippet">Snippet / Text</option>
+        <option value="note">Note</option>
+        <option value="custom">Custom Field</option>
+      </select>
+
+      <input type="text" id="dataTitle" placeholder="Enter Title or Label" />
+      <textarea id="dataContent" placeholder="Enter Content"></textarea>
+      <button id="addDataBtn"><i class="fa-solid fa-plus"></i> Add Data</button>
+    </section>
+
+    <section class="category-list">
+      <h2>Your Categories</h2>
+      <div id="categoriesContainer"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Memora - LocalKeep — Made with ❤️ by NeuroVynix.in</p>
+    <button id="clearDataBtn"><i class="fa-solid fa-trash"></i> Clear All Data</button>
+  </footer>
+
+  <div id="customAlert" class="custom-alert hidden">
+    <p id="alertMessage">Please fill all your fields!</p>
+  </div>
+
+</body>
+<script src="../Assets/JS/category.js"></script>
+</html>

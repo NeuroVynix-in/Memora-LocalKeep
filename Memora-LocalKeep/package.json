@@ -1,0 +1,16 @@
+{
+  "name": "memora-localkeep",
+  "version": "1.0.0",
+  "description": "**Version:** v1.0.0 (Final Stable Release)  \r **Status:** 💔 Officially Archived  \r **Goodbye Date:** November 9, 2025",
+  "main": "Home.html",
+  "scripts": {
+    "start": "echo 'Open index.html manually in your browser — this is a static website.'"
+  },
+  "author": "NeuroVynix.in",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NeuroVynix.in/memora-localkeep"
+  },
+  "type": "commonjs"
+}

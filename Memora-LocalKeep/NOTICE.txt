@@ -1,0 +1,12 @@
+Memora - LocalKeep — NOTICE
+
+Project: Memora - LocalKeep
+Author: NeuroVynix.in
+Goodbye Date: November 11, 2025
+
+Please respect the author's work:
+- DO NOT claim this project as your own or present it as your original work.
+- You are welcome to fork, study, reuse, or contribute, provided proper credit is given to NeuroVynix.in.
+- If you redistribute or publish derived work, please include attribution and a link back to the original repository.
+
+This NOTICE is not a substitute for a license. For legal terms, see the LICENSE file (MIT).

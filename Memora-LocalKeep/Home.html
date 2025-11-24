@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Memora - LocalKeep</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#928dab">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="Assets/CSS/home.css" />
+  <link rel="icon" href="Assets/Favicon/Memora-LocalKeep-Favicon.png" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1><i class="fa-solid fa-house"></i> Home</h1>
+      
+      <!-- <h1>Memora - LocalKeep</h1> -->
+      <ul class="nav-links">
+        <li><a href="Home.html" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="Pages/Dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+        <li><a href="Pages/Export-JSON.html"><i class="fa-solid fa-file-export"></i> Export</a></li>
+        <li><a href="Pages/Import-JSON.html"><i class="fa-solid fa-file-import"></i> Import</a></li>
+        <li><a href="Pages/Update-Log.html"><i class="fa-solid fa-wrench"></i> Update Log</a></li>
+        <li><a href="Pages/Developer.html"><i class="fa-solid fa-code"></i> Developer</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Organize All Your Data Effortlessly</h2>
+      <p>Store keys, URLs, snippets, notes, and custom data — securely saved in your browser’s local storage.</p>
+      <div class="buttons">
+        <a href="Pages/Dashboard.html" class="btn"><i class="fa-solid fa-door-open"></i> Get Started</a>
+        <a href="Pages/Export-JSON.html" class="btn secondary"><i class="fa-solid fa-file-export"> </i>Export / <i class="fa-solid fa-file-import"> </i>Import</a>
+      </div>
+    </section>
+
+    <section class="backup-warning">
+      <h2>🔒 Privacy & Data Safety Notice</h2>
+      <p>
+        <strong>Memora - LocalKeep</strong> values your privacy.
+        Our site will <strong>never ask for any personal information</strong> such as passwords, Gmail IDs, or any
+        other credentials. We do not use any backend or online database to store your data.
+      </p>
+      <p>
+        All information you save is stored locally in your browser using <strong>LocalStorage</strong>,
+        meaning <strong>only you</strong> can access your saved data. No one — not even our team — can view,
+        modify, or recover it once lost.
+      </p>
+      <p>
+        Please note that <strong>Memora - LocalKeep</strong> does not use cookies or external tracking systems.
+        While we ensure a secure local environment, we are <strong>not responsible for any loss of data</strong>
+        caused by browser resets, cache clearing, or device issues. For safety, always keep a
+        <strong>backup JSON file</strong> of your important data.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Memora - LocalKeep — Made with ❤️ by NeuroVynix.in</p>
+  </footer>
+
+  <script src="Assets/JS/script.js"></script>
+</body>
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+  }
+</script>
+</html>

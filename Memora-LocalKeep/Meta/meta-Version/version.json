@@ -1,0 +1,120 @@
+{
+  "appName": "Memora - LocalKeep",
+  "shortAppName": "MemoraLK",
+  "currentVersion": "1.0.0-stable",
+  "initialRelease": "0.1.0-alpha",
+  "siteView": "Version.html",
+  "changelog": [
+    {
+      "version": "0.8.1",
+      "type": "Patch",
+      "phase": "Alpha",
+      "date": "2025-11-11",
+      "changes": [
+        "Improved visual presentation across modules.",
+        "Added icons throughout the interface for better navigation.",
+        "Fine-tuned UI components for cleaner spacing and smoother animations.",
+        "Added new Meta Pages at memora-localkeep.netlify.app/meta/metaData.",
+        "Enhanced consistency and improved the intuitive feel of the platform."
+      ]
+    },
+    {
+      "version": "0.8.0",
+      "type": "Minor",
+      "phase": "Alpha",
+      "date": "2025-11-10",
+      "changes": [
+        "Introduced a fully custom popup system replacing default browser alerts.",
+        "Integrated t    hemed popup modals with smooth animations.",
+        "Updated import system to use custom confirm/cancel dialogs.",
+        "Added auto-closing informational popups.",
+        "Improved overall user experience with cleaner, modern popups."
+      ]
+    },
+    {
+      "version": "0.7.2",
+      "type": "Patch",
+      "phase": "Alpha",
+      "date": "2025-11-09",
+      "changes": [
+        "Added Styled File Input Enhancement in Choose Button."
+      ]
+    },
+    {
+      "version": "0.7.1-alpha",
+      "type": "Patch",
+      "phase": "Alpha",
+      "date": "2025-11-08",
+      "changes": [
+        "Fixed JSON import bug: data now appears correctly on the main page after import."
+      ]
+    },
+    {
+      "version": "0.7.0-alpha",
+      "type": "Minor",
+      "phase": "Alpha",
+      "date": "2025-11-07",
+      "changes": [
+        "Added Edit/Delete functionality for data and categories",
+        "Instant LocalStorage updates after modification"
+      ]
+    },
+    {
+      "version": "0.6.0-alpha",
+      "type": "Minor",
+      "phase": "Alpha",
+      "date": "2025-11-06",
+      "changes": [
+        "Added PWA support: installable web app",
+        "Offline usage and fullscreen mode enabled"
+      ]
+    },
+    {
+      "version": "0.5.0-alpha",
+      "type": "Minor",
+      "phase": "Alpha",
+      "date": "2025-11-05",
+      "changes": [
+        "Made the website fully responsive across desktop, tablet, and mobile devices"
+      ]
+    },
+    {
+      "version": "0.4.0-alpha",
+      "type": "Minor",
+      "phase": "Alpha",
+      "date": "2025-11-04",
+      "changes": [
+        "Added Live JSON Preview & Card Visualization",
+        "Enabled JSON data sharing between users"
+      ]
+    },
+    {
+      "version": "0.3.0-alpha",
+      "type": "Minor",
+      "phase": "Alpha",
+      "date": "2025-11-03",
+      "changes": [
+        "Added Backup & Restore system: export/import JSON files"
+      ]
+    },
+    {
+      "version": "0.2.0-alpha",
+      "type": "Minor",
+      "phase": "Alpha",
+      "date": "2025-11-02",
+      "changes": [
+        "Enhanced UI & visual experience: smoother design, rounded buttons, improved contrast"
+      ]
+    },
+    {
+      "version": "0.1.0-alpha",
+      "type": "Minor",
+      "phase": "Alpha",
+      "date": "2025-11-01",
+      "changes": [
+        "Initial release with LocalStorage-based data handling",
+        "Reliable saving and retrieval of notes, lists, and entries"
+      ]
+    }
+  ]
+}

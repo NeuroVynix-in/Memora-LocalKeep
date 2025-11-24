@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Version History | Memora - LocalKeep</title>
+  <link rel="shortcut icon" href="../../Assets/Favicon/Memora-LocalKeep-Favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Base styles */
+    * { margin:0; padding:0; box-sizing:border-box; font-family:"Poppins",sans-serif; }
+    body {
+      background: linear-gradient(135deg,#1f1c2c,#928dab,#5b4b8a);
+      color:#fff; min-height:100vh; padding:2rem 1rem; display:flex; flex-direction:column;
+    }
+    main { max-width:900px; margin:0 auto; flex:1; }
+    h1 { text-align:center; margin-bottom:3rem; font-size:2.5rem; color:#ffd700; line-height:1.2; }
+
+    /* Update cards */
+    section.update-card {
+      background: rgba(255,255,255,0.05); padding:2rem; margin-bottom:2rem;
+      border-radius:12px; box-shadow:0 4px 25px rgba(0,0,0,0.3); transition: transform 0.3s, box-shadow 0.3s;
+    }
+    section.update-card:hover { transform: translateY(-3px); box-shadow:0 6px 30px rgba(0,0,0,0.5); }
+
+    section.update-card h2 {
+      color:#ffba08; margin-bottom:1rem; font-size:1.8rem; display:flex; align-items:center; gap:0.5rem;
+      flex-wrap: wrap;
+    }
+    section.update-card h2 span.version-type {
+      font-size:0.9rem; color:#ffd700; font-weight:500;
+      background:rgba(0,0,0,0.3); padding:2px 8px; border-radius:6px;
+    }
+
+    section.update-card p { font-size:1rem; line-height:1.7; margin-bottom:1rem; }
+    section.update-card p strong { color:#ffd700; }
+
+    section.update-card ul { margin-top:0.5rem; margin-left:1.2rem; list-style: disc; }
+    section.update-card ul li { margin-bottom:0.5rem; }
+
+    footer { text-align:center; padding:1.5rem 0; color:#ffd700; font-size:0.9rem; margin-top:2rem; }
+
+    /* Responsive styles */
+    @media(max-width:1024px){
+      h1{font-size:2.2rem;}
+      section.update-card{padding:1.8rem;}
+      section.update-card h2{font-size:1.6rem;}
+      section.update-card p{font-size:0.95rem;}
+    }
+    @media(max-width:768px){
+      h1{font-size:2rem;}
+      section.update-card{padding:1.5rem;}
+      section.update-card h2{font-size:1.5rem;}
+      section.update-card p{font-size:0.92rem;}
+      section.update-card ul { margin-left:1rem; }
+    }
+    @media(max-width:480px){
+      h1{font-size:1.7rem;}
+      section.update-card{padding:1.2rem;}
+      section.update-card h2{font-size:1.3rem;}
+      section.update-card p{font-size:0.9rem;}
+      section.update-card ul { margin-left:0.8rem; padding-left:1rem; }
+    }
+    @media(max-width:360px){
+      h1{font-size:1.5rem;}
+      section.update-card{padding:1rem;}
+      section.update-card h2{font-size:1.2rem;}
+      section.update-card p{font-size:0.88rem;}
+      section.update-card ul { margin-left:0.7rem; padding-left:0.9rem; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <main>
+    <h1>📜 Version History | Memora - LocalKeep</h1>
+
+    <div id="versionContainer">
+      <!-- Updates will be dynamically added here -->
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Memora - LocalKeep — Made with ❤️ by NeuroVynix.in
+  </footer>
+
+  <script>
+    const versionData = {
+      "appName": "Memora - LocalKeep",
+      "shortAppName": "MemoraLK",
+      "currentVersion": "1.0.0-stable",
+      "initialRelease": "0.1.0-alpha",
+      "changelog": [
+        {
+          "version": "1.0.0-final",
+          "type": "Major",
+          "phase": "Stable",
+          "date": "2025-11-14",
+          "changes": ["Development for Memora - LocalKeep is concluded. Added farewell message, GitHub source link, and notice discouraging fake ownership."]
+        },
+        {
+          "version": "0.8.1-alpha",
+          "type": "Patch",
+          "phase": "Alpha",
+          "date": "2025-11-10",
+          "changes": ["Icons have been added throughout the interface for better visual cues and user navigation. "]
+        },
+        {
+          "version": "0.8.0-alpha",
+          "type": "Minor",
+          "phase": "Alpha",
+          "date": "2025-11-10",
+          "changes": ["Custom popup system added: replaced alert() prompts with in-site modal popups featuring transitions and consistent UI styling."]
+        },
+        {
+          "version": "0.7.2-alpha",
+          "type": "Patch",
+          "phase": "Alpha",
+          "date": "2025-11-09",
+          "changes": ["The default file input now matches Memora - LocalKeep’s gold-accent theme with smoother visuals and hover effects."]
+        },
+        {
+          "version": "0.7.1-alpha",
+          "type": "Patch",
+          "phase": "Alpha",
+          "date": "2025-11-08",
+          "changes": ["Fixed JSON import bug: data now appears correctly on the main page after import."]
+        },
+        {
+          "version": "0.7.0-alpha",
+          "type": "Minor",
+          "phase": "Alpha",
+          "date": "2025-11-07",
+          "changes": ["Added Edit/Delete functionality for data and categories", "Instant LocalStorage updates after modification"]
+        },
+        {
+          "version": "0.6.0-alpha",
+          "type": "Minor",
+          "phase": "Alpha",
+          "date": "2025-11-06",
+          "changes": ["Added PWA support: installable web app", "Offline usage and fullscreen mode enabled"]
+        },
+        {
+          "version": "0.5.0-alpha",
+          "type": "Minor",
+          "phase": "Alpha",
+          "date": "2025-11-05",
+          "changes": ["Made the website fully responsive across desktop, tablet, and mobile devices"]
+        },
+        {
+          "version": "0.4.0-alpha",
+          "type": "Minor",
+          "phase": "Alpha",
+          "date": "2025-11-04",
+          "changes": ["Added Live JSON Preview & Card Visualization", "Enabled JSON data sharing between users"]
+        },
+        {
+          "version": "0.3.0-alpha",
+          "type": "Minor",
+          "phase": "Alpha",
+          "date": "2025-11-03",
+          "changes": ["Added Backup & Restore system: export/import JSON files"]
+        },
+        {
+          "version": "0.2.0-alpha",
+          "type": "Minor",
+          "phase": "Alpha",
+          "date": "2025-11-02",
+          "changes": ["Enhanced UI & visual experience: smoother design, rounded buttons, improved contrast"]
+        },
+        {
+          "version": "0.1.0-alpha",
+          "type": "Minor",
+          "phase": "Alpha",
+          "date": "2025-11-01",
+          "changes": ["Initial release with LocalStorage-based data handling", "Reliable saving and retrieval of notes, lists, and entries"]
+        }
+      ]
+    };
+
+    const container = document.getElementById("versionContainer");
+
+    versionData.changelog.forEach(update => {
+      const section = document.createElement("section");
+      section.classList.add("update-card");
+
+      const changesHTML = update.changes.map(c => `<li>${c}</li>`).join("");
+
+      section.innerHTML = `
+        <h2>${update.phase} Update <span class="version-type">${update.version} - ${update.type}</span></h2>
+        <p><strong>Overview:</strong> ${update.changes[0]}</p>
+        <p><strong>Changes:</strong><ul>${changesHTML}</ul></p>
+        <p><strong>Date:</strong> ${update.date} • <strong>Phase:</strong> ${update.phase} • Developed by NeuroVynix.in</p>
+      `;
+      container.appendChild(section);
+    });
+  </script>
+
+</body>
+</html>

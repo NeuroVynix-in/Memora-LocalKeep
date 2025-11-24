@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>502 Bad Gateway | Memora - LocalKeep</title>
+<link rel="shortcut icon" href="../../Assets/Favicon/Memora-LocalKeep-Favicon.png" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
+  body {
+    background: linear-gradient(135deg, #1f1c2c, #928dab, #5b4b8a);
+    color: #fff; min-height:100vh; display:flex; flex-direction:column; padding:2rem 1rem; text-align:center;
+  }
+  main { max-width:900px; margin:0 auto; flex:1; }
+  .logo { width:80px; height:80px; margin-bottom:1rem; }
+  h1 { font-size:2.5rem; color:#ffd700; margin-bottom:1rem; }
+  section.card {
+    background: rgba(255,255,255,0.05); padding:2rem; margin-bottom:2rem; border-radius:12px;
+    box-shadow:0 4px 25px rgba(0,0,0,0.3); transition: transform 0.3s, box-shadow 0.3s;
+  }
+  section.card:hover { transform: translateY(-3px); box-shadow:0 6px 30px rgba(0,0,0,0.5); }
+  h2 { color:#ffba08; margin-bottom:1rem; font-size:1.8rem; }
+  p { font-size:1rem; line-height:1.7; margin-bottom:1rem; }
+  button {
+    padding:1rem 2rem; font-size:1.2rem; border:none; border-radius:10px;
+    background:#ffd700; color:#000; font-weight:600; cursor:pointer; transition:0.3s; margin-bottom:1rem;
+  }
+  button:hover { transform:translateY(-3px); box-shadow:0 5px 15px rgba(255,215,0,0.3); }
+  .counter, .uptime {
+    background: rgba(255,255,255,0.1); padding:1rem 2rem; border-radius:12px; margin-top:1rem; font-size:1rem; color: #5b4b8a;
+  }
+  #uptime, #tapCount {
+    color: #1f1c2c;
+  }
+  footer { text-align:center; padding:1.5rem 0; color:#ffd700; font-size:0.9rem; margin-top:2rem; }
+
+  @media(max-width:768px){
+    h1{ font-size:2rem; } section.card{ padding:1.5rem; } h2{ font-size:1.5rem; } p{ font-size:0.95rem; } 
+    button{ font-size:1rem; padding:0.8rem 1.5rem; }
+  }
+  @media(max-width:480px){
+    h1{ font-size:1.8rem; } section.card{ padding:1rem; } h2{ font-size:1.3rem; } p{ font-size:0.9rem; }
+    button{ font-size:0.95rem; padding:0.7rem 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <img src="../../Assets/Favicon/Memora-LocalKeep-Favicon.png" alt="Memora Logo" class="logo">
+  <h1>502 Bad Gateway</h1>
+
+  <section class="card">
+    <h2>Server is currently updating/testing</h2>
+    <p>We hope you already created a JSON backup of your data.</p>
+
+    <button id="tapBtn">Tap Me!</button>
+    <div class="counter">Tap count: <span id="tapCount">0</span></div>
+
+    <div class="uptime">Site uptime: <span id="uptime">0d 0h 0m 0s</span></div>
+  </section>
+</main>
+
+<footer>
+  © 2025 Memora - LocalKeep — Made with ❤️ by NeuroVynix.in
+</footer>
+
+<script>
+  // Tap counter
+  const tapBtn = document.getElementById('tapBtn');
+  const tapCountDisplay = document.getElementById('tapCount');
+  let tapCount = 0;
+  tapBtn.addEventListener('click', () => {
+    tapCount++;
+    tapCountDisplay.textContent = tapCount;
+  });
+
+  // Site uptime
+  const hostedDate = new Date("2025-11-01T00:00:00"); // deployment date
+  const uptimeDisplay = document.getElementById('uptime');
+
+  function updateUptime() {
+    const now = new Date();
+    let diff = now - hostedDate;
+    let days = Math.floor(diff / (1000*60*60*24));
+    let hours = Math.floor((diff / (1000*60*60)) % 24);
+    let minutes = Math.floor((diff / (1000*60)) % 60);
+    let seconds = Math.floor((diff / 1000) % 60);
+
+    uptimeDisplay.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  setInterval(updateUptime, 1000);
+  updateUptime();
+</script>
+
+</body>
+</html>

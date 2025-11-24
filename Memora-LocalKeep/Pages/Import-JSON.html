@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Import Data | Memora - LocalKeep</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="../Assets/CSS/import-json.css">
+  <link rel="icon" href="../Assets/Favicon/Memora-LocalKeep-Favicon.png">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1><i class="fa-solid fa-file-import"></i> Import JSON Data</h1>
+      <ul class="nav-links">
+        <li><a href="../Home.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="Dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+        <li><a href="Export-JSON.html"><i class="fa-solid fa-file-export"></i> Export</a></li>
+        <li><a href="Import-JSON.html" class="active"><i class="fa-solid fa-file-import"></i> Import</a></li>
+        <li><a href="Update-Log.html"><i class="fa-solid fa-wrench"></i> Update Log</a></li>
+        <li><a href="Developer.html"><i class="fa-solid fa-code"></i> Developer</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="import-container">
+    <h2><i class="fa-solid fa-file-import"></i>  Import Data</h2>
+    <p>Select a JSON file to import into your categories.</p>
+
+    <input type="file" id="importFile" accept=".json">
+    <button id="importBtn" class="btn"><i class="fa-solid fa-file-import"></i> Import JSON</button>
+
+    <div id="previewBox" class="preview-box"></div>
+  </main>
+
+  <footer>
+    <p>© 2025 Memora - LocalKeep — Made with ❤️ by NeuroVynix.in</p>
+  </footer>
+
+  <!-- Popup Container -->
+<div id="popupContainer" class="popup-container hidden">
+  <div class="popup-box">
+    <p id="popupMessage"></p>
+    <div class="popup-buttons">
+      <button id="popupConfirmBtn">Confirm</button>
+      <button id="popupCancelBtn">Cancel</button>
+    </div>
+  </div>
+</div>
+
+  <script src="../Assets/JS/import-json.js"></script>
+</body>
+</html>

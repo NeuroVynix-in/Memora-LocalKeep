@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Export Data | Memora - LocalKeep</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="../Assets/CSS/export-json.css" />
+  <link rel="icon" href="../Assets/Favicon/Memora-LocalKeep-Favicon.png" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1><i class="fa-solid fa-file-export"></i> Export JSON Data</h1>
+      <ul class="nav-links">
+        <li><a href="../Home.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="Dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+        <li><a href="Export-JSON.html" class="active"><i class="fa-solid fa-file-export"></i> Export</a></li>
+        <li><a href="Import-JSON.html"><i class="fa-solid fa-file-import"></i> Import</a></li>
+        <li><a href="Update-Log.html"><i class="fa-solid fa-wrench"></i> Update Log</a></li>
+        <li><a href="Developer.html"><i class="fa-solid fa-code"></i> Developer</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="export-page">
+    <section class="export-controls">
+      <h2><i class="fa-solid fa-file-export"></i> Export Your Data</h2>
+      <button id="exportBtn"><i class="fa-solid fa-download"></i> Download JSON</button>
+      <button id="toggleViewBtn"><i class="fa-solid fa-eye"></i> Switch to Card View</button>
+    </section>
+
+    <section class="json-display">
+      <h2><i class="fa-solid fa-magnifying-glass"></i> Live JSON Preview</h2>
+      <pre id="jsonOutput" class="json-box"></pre>
+      <div id="cardView" class="card-view hidden"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Memora - LocalKeep — Made with ❤️ by NeuroVynix.in</p>
+  </footer>
+
+  <script src="../Assets/JS/export-json.js"></script>
+</body>
+</html>

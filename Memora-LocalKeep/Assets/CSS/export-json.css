@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1f1c2c, #928dab, #5b4b8a);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffd700;
+}
+
+.export-page {
+  flex: 1;
+  padding: 2rem 5%;
+}
+
+.export-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+button {
+  background: #ffd700;
+  border: none;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.json-display {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.json-box {
+  margin-top: 1rem;
+  background: #1b1b1b;
+  color: #00ff9d;
+  padding: 1rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  max-height: 70vh;
+  font-size: 0.9rem;
+}
+
+.card-view {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.data-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  color: #fff;
+  border-left: 4px solid #ffd700;
+}
+
+.data-card h3 {
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* 🌍 Responsive Design */
+@media (max-width: 1024px) {
+  .export-page {
+    padding: 2rem 3%;
+  }
+
+  .navbar h1 {
+    font-size: 1.3rem;
+  }
+
+  .export-controls {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .json-box {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .navbar h1 {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+  }
+
+  .export-page {
+    padding: 1.5rem;
+  }
+
+  .export-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card-view {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .json-box {
+    max-height: 60vh;
+    font-size: 0.85rem;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar h1 {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    gap: 0.5rem;
+  }
+
+  .export-page {
+    padding: 1rem;
+  }
+
+  .export-controls {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .data-card {
+    padding: 0.8rem;
+  }
+
+  .data-card h3 {
+    font-size: 1rem;
+  }
+
+  .json-box {
+    font-size: 0.8rem;
+    max-height: 55vh;
+  }
+
+  footer {
+    font-size: 0.75rem;
+  }
+}

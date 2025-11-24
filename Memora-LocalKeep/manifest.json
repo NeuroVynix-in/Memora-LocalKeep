@@ -1,0 +1,36 @@
+{
+  "name": "MemoraLK",
+  "short_name": "MemoraLK",
+  "start_url": "Home.html",
+  "display": "standalone",
+  "background_color": "#1f1c2c",
+  "theme_color": "#928dab",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "Assets/Images/MemoraLK-Icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "Assets/Images/MemoraLK-Icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+
+  "screenshots": [
+  {
+    "src": "Assets/Images/MemoraLK-Screenshot-Wide.png",
+    "sizes": "1912x866",
+    "type": "image/png",
+    "form_factor": "wide"
+  },
+  {
+    "src": "Assets/Images/MemoraLK-Screenshot-Mobile.png",
+    "sizes": "345x774",
+    "type": "image/png"
+  }
+  ]
+
+}
