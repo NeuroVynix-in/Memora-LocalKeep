@@ -25,7 +25,7 @@ We take your privacy seriously:
 1. Open the site: [Memora – LocalKeep](https://memora-localkeep.netlify.app/)  
 2. Click **“Get Started”** to access the dashboard.  
 3. Add a new item: Choose a category (key, URL, snippet, custom), fill the details, and hit *Save*.  
-4. Browse or search your data easily 23via the dashboard.  
+4. Browse or search your data easily via the dashboard.  
 5. Export your full dataset to a JSON file for safekeeping (via **Export**).  
 6. Import a previously exported JSON file to restore or migrate your data (via **Import**).
 
